@@ -3,15 +3,15 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-04-01T23:48:53.723Z",
+        "start_timestamp": "2022-12-01T23:35:55.765Z",
         "before": [
           {
             "result": {
-              "duration": 1365492000,
+              "duration": 3584774700,
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hook.InitializeTest(io.cucumber.java.Scenario)"
+              "location": "pages.steps.Hook.InitializeTest(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -22,11 +22,11 @@
         "after": [
           {
             "result": {
-              "duration": 67775000,
+              "duration": 143910000,
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hook.TearDownTest(io.cucumber.java.Scenario)"
+              "location": "pages.steps.Hook.TearDownTest(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -35,33 +35,32 @@
         "steps": [
           {
             "result": {
-              "duration": 1391872000,
+              "duration": 3210008000,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 302000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 5,
             "name": "I navigate to the login page",
             "match": {
-              "location": "steps.LoginStep.iNavigateToTheLoginPage()"
+              "location": "pages.steps.LoginStep.iNavigateToTheLoginPage()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 31000,
+                  "duration": 998900,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -69,33 +68,32 @@
           },
           {
             "result": {
-              "duration": 237815000,
+              "duration": 263833200,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 48000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 6,
             "name": "I enter the following for Login",
             "match": {
-              "location": "steps.LoginStep.iEnterTheFollowingForLogin(java.util.List\u003csteps.LoginStep$User\u003e)"
+              "location": "pages.steps.LoginStep.iEnterTheFollowingForLogin(java.util.List\u003cpages.steps.LoginStep$User\u003e)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 28000,
+                  "duration": 999800,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -117,33 +115,33 @@
           },
           {
             "result": {
-              "duration": 393921000,
+              "duration": 169894500,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 53000,
+                  "duration": 999200,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 9,
             "name": "I click login button",
             "match": {
-              "location": "steps.LoginStep.iClickLoginButton()"
+              "location": "pages.steps.LoginStep.iClickLoginButton()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 29000,
+                  "duration": 998100,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -151,33 +149,32 @@
           },
           {
             "result": {
-              "duration": 30750000,
+              "duration": 84944400,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 42000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 10,
             "name": "I should see the userform page",
             "match": {
-              "location": "steps.LoginStep.iShouldSeeTheUserformPage()"
+              "location": "pages.steps.LoginStep.iShouldSeeTheUserformPage()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 34000,
+                  "duration": 999400,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -186,15 +183,15 @@
         ]
       },
       {
-        "start_timestamp": "2021-04-01T23:48:57.219Z",
+        "start_timestamp": "2022-12-01T23:36:03.280Z",
         "before": [
           {
             "result": {
-              "duration": 556267000,
+              "duration": 730546000,
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hook.InitializeTest(io.cucumber.java.Scenario)"
+              "location": "pages.steps.Hook.InitializeTest(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -205,11 +202,11 @@
         "after": [
           {
             "result": {
-              "duration": 67597000,
+              "duration": 128919700,
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hook.TearDownTest(io.cucumber.java.Scenario)"
+              "location": "pages.steps.Hook.TearDownTest(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -218,33 +215,33 @@
         "steps": [
           {
             "result": {
-              "duration": 1362973000,
+              "duration": 516676800,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 55000,
+                  "duration": 1001900,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 13,
             "name": "I navigate to the login page",
             "match": {
-              "location": "steps.LoginStep.iNavigateToTheLoginPage()"
+              "location": "pages.steps.LoginStep.iNavigateToTheLoginPage()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 27000,
+                  "duration": 1000200,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -252,33 +249,32 @@
           },
           {
             "result": {
-              "duration": 233299000,
+              "duration": 177887500,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 40000,
+                  "duration": 1000200,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 14,
             "name": "I enter the following for Login",
             "match": {
-              "location": "steps.LoginStep.iEnterTheFollowingForLogin(java.util.List\u003csteps.LoginStep$User\u003e)"
+              "location": "pages.steps.LoginStep.iEnterTheFollowingForLogin(java.util.List\u003cpages.steps.LoginStep$User\u003e)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 30000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -300,33 +296,32 @@
           },
           {
             "result": {
-              "duration": 404723000,
+              "duration": 136915100,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 38000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 17,
             "name": "I click login button",
             "match": {
-              "location": "steps.LoginStep.iClickLoginButton()"
+              "location": "pages.steps.LoginStep.iClickLoginButton()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 28000,
+                  "duration": 1000100,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -334,33 +329,31 @@
           },
           {
             "result": {
-              "duration": 123000,
+              "duration": 999200,
               "status": "passed"
             },
             "before": [
               {
                 "result": {
-                  "duration": 37000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.BeforeEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
             "line": 18,
             "name": "I should see the userform page wrongly",
             "match": {
-              "location": "steps.LoginStep.iShouldSeeTheUserformPageWrongly()"
+              "location": "pages.steps.LoginStep.iShouldSeeTheUserformPageWrongly()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 11000,
                   "status": "passed"
                 },
                 "match": {
-                  "location": "steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
+                  "location": "pages.steps.Hook.AfterEveryStep(io.cucumber.java.Scenario)"
                 }
               }
             ],
@@ -370,7 +363,7 @@
       }
     ],
     "name": "LoginFeature",
-    "description": "  This feature deals with the login functionality of the application",
+    "description": "  This feature deals with the login functionality of the applications",
     "id": "loginfeature",
     "keyword": "Feature",
     "uri": "file:src/test/java/features/Login.feature",

@@ -1,4 +1,4 @@
-package steps;
+package pages.steps;
 
 import Base.BaseUtil;
 import com.aventstack.extentreports.GherkinKeyword;
