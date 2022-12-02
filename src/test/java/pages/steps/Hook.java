@@ -16,11 +16,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
-
-/**
- * Created by Karthik on 31/01/2019.
- */
-
 public class Hook extends BaseUtil{
 
     private BaseUtil base;
@@ -42,7 +37,6 @@ public class Hook extends BaseUtil{
     @After
     public void TearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
-            //Take screenshot logic goes here
             System.out.println(scenario.getName());
         }
         System.out.println("Closing the browser : MOCK");
@@ -56,7 +50,6 @@ public class Hook extends BaseUtil{
 
     @AfterStep
     public void AfterEveryStep(Scenario scenario) throws NoSuchFieldException, IllegalAccessException {
-        //System.out.println("Before every step " + stepTestStep.getId());
     }
 
 }

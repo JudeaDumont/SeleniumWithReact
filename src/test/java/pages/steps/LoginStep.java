@@ -6,9 +6,6 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import pages.LoginPage;
 
 import java.util.List;
@@ -26,74 +23,68 @@ public class LoginStep extends BaseUtil{
     }
 
     @DataTableType(replaceWithEmptyString = "[blank]")
-    public User convert(Map<String, String> entry){
-        return new User(
-                entry.get("username"),
-                entry.get("password").concat("$$$$$")
+    public Candidate convert(Map<String, String> entry){
+        return new Candidate(
+                entry.get("name")
         );
     }
 
+    @Given("^I navigate to Angular$")
+    public void iNavigateToAngular() throws Throwable {
+        base.scenarioDef.createNode(
+                new GherkinKeyword("Given"),
+                "I navigate to Angular");
+        base.Driver.navigate().to("http://localhost:4200/");
 
-    @Then("^I should see the userform page$")
-    public void iShouldSeeTheUserformPage() throws Throwable {
-        scenarioDef.createNode(new GherkinKeyword("Then"), "I should see the userform page");
-
-        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("Initial")).isDisplayed(), true);
     }
 
-    @Given("^I navigate to the login page$")
-    public void iNavigateToTheLoginPage() throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("Given"), "I navigate to the login page");
-        System.out.println("Navigate Login Page");
-        base.Driver.navigate().to("http://www.executeautomation.com/demosite/Login.html");
-    }
-
-
-    @And("^I click login button$")
-    public void iClickLoginButton() throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("And"), "I click login button");
-        LoginPage page = new LoginPage(base.Driver);
-        page.ClickLogin();
-    }
-
-
-    @And("^I enter the following for Login$")
-    public void iEnterTheFollowingForLogin(List<User> table) throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("And"), "I enter the following for login");
-        //Create an ArrayList
-        //List<User> users =  new ArrayList<User>();
-        //Store all the users
-        //List<User> users = table.asList(User.class);
+    @And("^I enter a name$")
+    public void iEnterTheFollowingForLogin(List<Candidate> table)
+            throws Throwable {
+        base.scenarioDef.createNode(
+                new GherkinKeyword("And"),
+                "I enter the following for login");
 
         LoginPage page = new LoginPage(base.Driver);
 
-        page.Login(table.get(0).username, table.get(0).password);
-
-        //page.Login(users.get(2), users.get(3));
+        page.Add(table.get(0).name);
 
     }
+//
+//    @And("^I click login button$")
+//    public void iClickLoginButton() throws Throwable {
+//        base.scenarioDef.createNode(new GherkinKeyword("And"), "I click login button");
+//        LoginPage page = new LoginPage(base.Driver);
+//        page.ClickLogin();
+//    }
+//
+//
+//    @Then("^I should see the userform page$")
+//    public void iShouldSeeTheUserformPage() throws Throwable {
+//        scenarioDef.createNode(new GherkinKeyword("Then"), "I should see the userform page");
+//
+//        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("Initial")).isDisplayed(), true);
+//    }
+//
+//    @And("^I enter a ([^\"]*)$")
+//    public void iEnterName(String name) throws Throwable {
+//        base.scenarioDef.createNode(
+//                new GherkinKeyword("And"),
+//                "I enter a name");
+//    }
+//
+//    @Then("^I should see the userform page wrongly$")
+//    public void iShouldSeeTheUserformPageWrongly() throws Throwable {
+//        base.scenarioDef.createNode(new GherkinKeyword("Then"), "I should see  the useform page wrongly");
+//        //Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
+//    }
 
-    @And("^I enter ([^\"]*) and ([^\"]*)$")
-    public void iEnterUsernameAndPassword(String userName, String password) throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("And"), "I enter username and password");
-        System.out.println("UserName is : " + userName);
-        System.out.println("Password is : " + password);
-    }
 
-    @Then("^I should see the userform page wrongly$")
-    public void iShouldSeeTheUserformPageWrongly() throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("Then"), "I should see  the useform page wrongly");
-        //Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
-    }
+    public class Candidate {
+        public String name;
 
-
-    public class User {
-        public String username;
-        public String password;
-
-        public User(String userName, String passWord) {
-            username= userName;
-            password = passWord;
+        public Candidate(String name) {
+            this.name= name;
         }
     }
 

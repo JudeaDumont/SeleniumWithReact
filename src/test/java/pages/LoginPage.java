@@ -15,25 +15,23 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.NAME, using = "UserName")
+    @FindBy(how = How.ID, using = "save-candidate-name")
     public WebElement txtUserName;
 
-    @FindBy(how = How.NAME, using = "Password")
-    public WebElement txtPassword;
+//    @FindBy(how = How.NAME, using = "Password")
+//    public WebElement txtPassword;
+//
+//    @FindBy(how = How.NAME, using = "Login")
+//    public WebElement btnLogin;
 
-    @FindBy(how = How.NAME, using = "Login")
-    public WebElement btnLogin;
-
-    public void Login(String userName, String password)
+    public void Add(String name)
     {
-        txtUserName.sendKeys(userName);
-        txtPassword.sendKeys(password);
+        txtUserName.sendKeys(name);
     }
 
-    public void ClickLogin()
-    {
-        btnLogin.submit();
-    }
-
+//    public void ClickLogin()
+//    {
+//        btnLogin.submit();
+//    }
 
 }
