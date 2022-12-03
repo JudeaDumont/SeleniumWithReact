@@ -16,10 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Selenium/Cucumber JDK 1.8
+    - name: Set up Selenium/Cucumber JDK 19
       uses: actions/setup-java@v1
       with:
-        java-version: 10
+        java-version: 19
     - name: Build Selenium/Cucumber with Maven
       run: mvn clean verify -Dtestng.dtd.http=true
     - uses: deblockt/cucumber-report-annotations-action@v1.7
