@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="A bunch of random changes in a &quot;Default&quot; changelist from the original repo I guess?">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven_new.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven_new.yml" afterDir="false" />
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CucumberBasics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CucumberBasics.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669939044356</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
+      <created>1670032199318</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670032199318</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -349,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="don't commit target" />
     <MESSAGE value="A bunch of random changes in a &quot;Default&quot; changelist from the original repo I guess?" />
-    <option name="LAST_COMMIT_MESSAGE" value="A bunch of random changes in a &quot;Default&quot; changelist from the original repo I guess?" />
+    <MESSAGE value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
