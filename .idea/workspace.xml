@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" afterDir="false" />
     </list>
@@ -361,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670120489498</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails">
+      <created>1670124120435</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670124120435</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -396,7 +403,8 @@
     <MESSAGE value="don't commit target" />
     <MESSAGE value="A bunch of random changes in a &quot;Default&quot; changelist from the original repo I guess?" />
     <MESSAGE value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
+    <MESSAGE value="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
