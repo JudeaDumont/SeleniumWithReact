@@ -34,7 +34,9 @@ public class LoginStep extends BaseUtil{
         base.scenarioDef.createNode(
                 new GherkinKeyword("Given"),
                 "I navigate to Angular");
-        base.Driver.navigate().to("http://postgres:4200/");
+        String url = "http://postgres:4200/";
+        System.out.println(url);
+        base.Driver.navigate().to(url);
 
     }
 
