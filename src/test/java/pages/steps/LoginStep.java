@@ -37,10 +37,7 @@ public class LoginStep extends BaseUtil{
         base.scenarioDef.createNode(
                 new GherkinKeyword("Given"),
                 "I navigate to Angular");
-        Socket socket = new Socket();
-        socket.connect(new InetSocketAddress("google.com", 80));
-        System.out.println(socket.getLocalAddress());
-        base.Driver.navigate().to("http:/" + socket.getLocalAddress() + ":4200");
+        base.Driver.navigate().to("http://localhost:4200");
 
     }
 
