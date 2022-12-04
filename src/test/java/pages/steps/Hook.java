@@ -30,6 +30,7 @@ public class Hook extends BaseUtil{
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
         base.Driver = new ChromeDriver(chromeOptions);
     }
 
