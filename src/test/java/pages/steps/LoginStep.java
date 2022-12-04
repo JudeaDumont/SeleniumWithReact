@@ -8,6 +8,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.LoginPage;
 
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 import java.util.List;
 import java.util.Map;
 
@@ -34,9 +37,10 @@ public class LoginStep extends BaseUtil{
         base.scenarioDef.createNode(
                 new GherkinKeyword("Given"),
                 "I navigate to Angular");
-        String url = "http://postgres:4200/";
-        System.out.println(url);
-        base.Driver.navigate().to(url);
+        Socket socket = new Socket();
+        socket.connect(new InetSocketAddress("google.com", 80));
+        System.out.println(socket.getLocalAddress());
+        base.Driver.navigate().to("http:/" + socket.getLocalAddress() + ":4200");
 
     }
 
