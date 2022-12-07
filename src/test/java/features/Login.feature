@@ -6,8 +6,8 @@ Feature: LoginFeature
     And I enter a name
       | name |
       | chef |
-#    And I click login button
-#    Then I should see the userform page
+    And I click the add button
+    #Then I should see an additional candidate
 #
 #  Scenario: Login with correct username and password to fail
 #    Given I navigate to the login page

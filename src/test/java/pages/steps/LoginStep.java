@@ -50,13 +50,14 @@ public class LoginStep extends BaseUtil{
         page.Add(table.get(0).name);
 
     }
-//
-//    @And("^I click login button$")
-//    public void iClickLoginButton() throws Throwable {
-//        base.scenarioDef.createNode(new GherkinKeyword("And"), "I click login button");
-//        LoginPage page = new LoginPage(base.Driver);
-//        page.ClickLogin();
-//    }
+
+    @And("^I click the add button$")
+    public void iClickLoginButton() throws Throwable {
+        base.scenarioDef.createNode(new GherkinKeyword("And"), "I click login button");
+        LoginPage page = new LoginPage(base.Driver);
+        page.clickAdd();
+    }
+
 //
 //
 //    @Then("^I should see the userform page$")

@@ -15,23 +15,20 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.ID, using = "save-candidate-name")
+    @FindBy(how = How.ID, using = "candidate-name-textbox")
     public WebElement txtUserName;
 
-//    @FindBy(how = How.NAME, using = "Password")
-//    public WebElement txtPassword;
-//
-//    @FindBy(how = How.NAME, using = "Login")
-//    public WebElement btnLogin;
+    @FindBy(how = How.NAME, using = "add-candidate-btn")
+    public WebElement btnAdd;
 
     public void Add(String name)
     {
         txtUserName.sendKeys(name);
     }
 
-//    public void ClickLogin()
-//    {
-//        btnLogin.submit();
-//    }
+    public void clickAdd()
+    {
+        btnAdd.submit();
+    }
 
 }
