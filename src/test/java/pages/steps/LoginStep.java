@@ -8,9 +8,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.LoginPage;
 
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.util.List;
 import java.util.Map;
 
