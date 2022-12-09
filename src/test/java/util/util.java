@@ -12,6 +12,9 @@ public class util {
     ){
         List<Candidate> copy = new ArrayList<>(candidates2);
         copy.removeAll(candidates1);
+        System.out.println(copy.toString());
+        System.out.println(candidates1.toString());
+        System.out.println(candidates2.toString());
         assert(copy.size() == 1);
         return copy.get(0);
     }
