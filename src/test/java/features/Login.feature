@@ -3,16 +3,14 @@ Feature: LoginFeature
 
   Scenario: Login with correct username and password
     Given I navigate to Angular
-    And I enter a name
+    And I get existing candidates
+    And I enter a name to add
       | name |
       | chef |
     And I click the add button
-    #Then I should see an additional candidate
-#
-#  Scenario: Login with correct username and password to fail
-#    Given I navigate to the login page
-#    And I enter the following for Login
-#      | username | password      |
-#      | admin    | adminpassword |
-#    And I click login button
-#    Then I should see the userform page wrongly
+#    And I enter an id to delete
+#      | id |
+#      | chef |
+#    #this is going to be pretty elaborate to get the id,
+#    #diff the table data before and after add i guess.
+#    And I click the delete button

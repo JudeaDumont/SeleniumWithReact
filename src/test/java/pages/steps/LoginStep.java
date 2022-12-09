@@ -6,7 +6,8 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import pages.LoginPage;
+import model.Candidate;
+import pages.CandidatePage;
 
 import java.util.List;
 import java.util.Map;
@@ -38,55 +39,32 @@ public class LoginStep extends BaseUtil{
 
     }
 
-    @And("^I enter a name$")
-    public void iEnterTheFollowingForLogin(List<Candidate> table)
+    @And("^I get existing candidates$")
+    public void iGetExistingCandidates(){
+        CandidatePage page = new CandidatePage(base.Driver);
+        page.getCandidatesFromTable();
+    }
+
+
+    @And("^I enter a name to add$")
+    public void iEnterANameToAdd(List<Candidate> table)
             throws Throwable {
         base.scenarioDef.createNode(
                 new GherkinKeyword("And"),
-                "I enter the following for login");
+                "I enter a name to add");
 
-        LoginPage page = new LoginPage(base.Driver);
+        CandidatePage page = new CandidatePage(base.Driver);
 
-        page.Add(table.get(0).name);
+        page.Add(table.get(0).getName());
 
     }
 
     @And("^I click the add button$")
     public void iClickLoginButton() throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("And"), "I click login button");
-        LoginPage page = new LoginPage(base.Driver);
+        base.scenarioDef.createNode(new GherkinKeyword("And"),
+                "I click login button");
+        CandidatePage page = new CandidatePage(base.Driver);
         page.clickAdd();
-    }
-
-//
-//
-//    @Then("^I should see the userform page$")
-//    public void iShouldSeeTheUserformPage() throws Throwable {
-//        scenarioDef.createNode(new GherkinKeyword("Then"), "I should see the userform page");
-//
-//        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("Initial")).isDisplayed(), true);
-//    }
-//
-//    @And("^I enter a ([^\"]*)$")
-//    public void iEnterName(String name) throws Throwable {
-//        base.scenarioDef.createNode(
-//                new GherkinKeyword("And"),
-//                "I enter a name");
-//    }
-//
-//    @Then("^I should see the userform page wrongly$")
-//    public void iShouldSeeTheUserformPageWrongly() throws Throwable {
-//        base.scenarioDef.createNode(new GherkinKeyword("Then"), "I should see  the useform page wrongly");
-//        //Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
-//    }
-
-
-    public class Candidate {
-        public String name;
-
-        public Candidate(String name) {
-            this.name= name;
-        }
     }
 
 }
