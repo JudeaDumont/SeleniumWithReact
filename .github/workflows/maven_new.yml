@@ -113,7 +113,8 @@ jobs:
           Xvfb :0 -ac -screen 0 1024x768x24 &
           
           cd java-ecosystem-project/webapi
-          mvn spring-boot:run -DJASYPT_ENCRYPTOR_PASSWORD=secretkey
+          export JASYPT_ENCRYPTOR_PASSWORD=secretkey
+          mvn spring-boot:run
           cd ../../angular
           ng serve &
           cd ..
