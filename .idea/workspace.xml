@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Test for adding and deleting a candidate all the while making sure the tbale updates appropriately.">
       <change beforePath="$PROJECT_DIR$/.github/workflows/maven_new.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven_new.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -497,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670627044608</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Test for adding and deleting a candidate all the while making sure the tbale updates appropriately.">
+      <created>1670627561703</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670627561703</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
