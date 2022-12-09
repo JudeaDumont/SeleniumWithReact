@@ -111,8 +111,10 @@ jobs:
 
           google-chrome --headless --no-sandbox
           Xvfb :0 -ac -screen 0 1024x768x24 &
-
-          cd angular
+          
+          cd java-ecosystem-project/webapi
+          mvn spring-boot:run
+          cd ../../angular
           ng serve &
           cd ..
 
