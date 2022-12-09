@@ -6,21 +6,24 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import model.Candidate;
 import pages.CandidatePage;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Karthik on 31/01/2019.
- */
+import static util.util.getCandidateFromTableDiff;
+
 public class LoginStep extends BaseUtil{
 
-    private  BaseUtil base;
+    private final List<List<Candidate>> candidateTableHistory
+            = new ArrayList<>();
 
-    public LoginStep(BaseUtil base) {
-        this.base = base;
+    private Candidate candidateFromTableDiff = null;
+
+    public LoginStep() {
     }
 
     @DataTableType(replaceWithEmptyString = "[blank]")
@@ -32,39 +35,75 @@ public class LoginStep extends BaseUtil{
 
     @Given("^I navigate to Angular$")
     public void iNavigateToAngular() throws Throwable {
-        base.scenarioDef.createNode(
+        scenarioDef.createNode(
                 new GherkinKeyword("Given"),
                 "I navigate to Angular");
-        base.Driver.navigate().to("http://localhost:4200");
+        Driver.navigate().to("http://localhost:4200");
 
     }
 
-    @And("^I get existing candidates$")
+    @And("^I add candidate table to history$")
     public void iGetExistingCandidates(){
-        CandidatePage page = new CandidatePage(base.Driver);
-        page.getCandidatesFromTable();
+        CandidatePage page = new CandidatePage(Driver);
+        candidateTableHistory.add(page.getCandidatesFromTable());
+    }
+
+    @Then("^diff tables to get the new candidates ID$")
+    public void diffTablesToGetNewID(){
+        candidateFromTableDiff = getCandidateFromTableDiff(
+                candidateTableHistory.get(0),
+                candidateTableHistory.get(1)
+        );
+    }
+
+    @Then("^the table does not contain the candidate$")
+    public void tableDoesNotContainCandidate(){
+        assert (!candidateTableHistory.get(3).contains(candidateFromTableDiff));
+
     }
 
 
     @And("^I enter a name to add$")
     public void iEnterANameToAdd(List<Candidate> table)
             throws Throwable {
-        base.scenarioDef.createNode(
+        scenarioDef.createNode(
                 new GherkinKeyword("And"),
                 "I enter a name to add");
 
-        CandidatePage page = new CandidatePage(base.Driver);
+        CandidatePage page = new CandidatePage(Driver);
 
         page.Add(table.get(0).getName());
 
     }
 
+
+    @And("^I enter the new candidates id to delete$")
+    public void iEnterTheNewCandidatesIDToDelete()
+            throws Throwable {
+        scenarioDef.createNode(
+                new GherkinKeyword("And"),
+                "I enter the new candidates id to delete");
+
+        CandidatePage page = new CandidatePage(Driver);
+
+        page.Delete(candidateFromTableDiff);
+
+    }
+
     @And("^I click the add button$")
-    public void iClickLoginButton() throws Throwable {
-        base.scenarioDef.createNode(new GherkinKeyword("And"),
-                "I click login button");
-        CandidatePage page = new CandidatePage(base.Driver);
+    public void iClickTheAddButton() throws Throwable {
+        scenarioDef.createNode(new GherkinKeyword("And"),
+                "I click the add button");
+        CandidatePage page = new CandidatePage(Driver);
         page.clickAdd();
+    }
+
+    @And("^I click the delete button$")
+    public void iClickTheDeleteButton() throws Throwable {
+        scenarioDef.createNode(new GherkinKeyword("And"),
+                "I click the delete button");
+        CandidatePage page = new CandidatePage(Driver);
+        page.clickDelete();
     }
 
 }

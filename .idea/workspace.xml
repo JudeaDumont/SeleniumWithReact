@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Extra step in the UI test, add candidate">
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/Candidate.java" afterDir="false" />
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Implementation for getting candidates from the angular candidate table">
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670457598240</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Implementation for getting candidates from the angular candidate table">
+      <created>1670606523644</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670606523644</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -486,7 +498,8 @@
     <MESSAGE value="removing unused imports" />
     <MESSAGE value="I want updates to the selenium repo to build the full project and run tests against it was well." />
     <MESSAGE value="Extra step in the UI test, add candidate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extra step in the UI test, add candidate" />
+    <MESSAGE value="Implementation for getting candidates from the angular candidate table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation for getting candidates from the angular candidate table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,9 +520,9 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/steps/Hook.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
