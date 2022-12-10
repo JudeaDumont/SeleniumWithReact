@@ -117,7 +117,6 @@ jobs:
           cd java-ecosystem-project/webapi
           export JASYPT_ENCRYPTOR_PASSWORD=secretkey
           mvn spring-boot:run &
-          sleep 60
           cd ../../angular
           ng serve &
           cd ..
