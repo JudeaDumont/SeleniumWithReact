@@ -15,6 +15,10 @@ import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+
+import java.util.logging.Level;
 
 public class Hook extends BaseUtil{
 
@@ -31,6 +35,12 @@ public class Hook extends BaseUtil{
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox"); //required for CI/CD workflows
+
+        //required for all log levels in the browser console
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.BROWSER, Level.ALL);
+        chromeOptions.setCapability("goog:loggingPrefs", logPrefs);
+
         base.Driver = new ChromeDriver(chromeOptions);
     }
 
