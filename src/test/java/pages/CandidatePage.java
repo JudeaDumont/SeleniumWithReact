@@ -58,9 +58,6 @@ public class CandidatePage {
         try {
             allRows = candidateTable.findElements(By.tagName("tr"));
             System.out.println("allRows: " + allRows.toString());
-        } catch (StaleElementReferenceException e) { //I really do not like this
-            return getCandidatesFromTable();
-        }
         for (WebElement row : allRows) {
             System.out.println("row: " + row.toString());
             List<WebElement> cells = row.findElements(By.tagName("td"));
@@ -71,6 +68,9 @@ public class CandidatePage {
                         cells.get(0).getText(),
                         Long.parseLong(cells.get(1).getText())));
             }
+        }
+        } catch (StaleElementReferenceException e) { //I really do not like this
+            return getCandidatesFromTable();
         }
         return candidates;
     }

@@ -29,7 +29,9 @@ public class util {
             System.out.println(e);
         }
 
+        System.out.println(copy.toString());
         assert(copy.size() == 1);
+        System.out.println(copy.toString());
         return copy.get(0);
     }
 }
