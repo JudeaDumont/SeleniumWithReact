@@ -96,6 +96,8 @@ jobs:
       - name: Build Selenium/Cucumber with Maven
 
         #fix for dbus included
+        #ng serve needs to give me output, why is the table not updating? headless? console errors? http errors?
+        # shell into github environment, run browser
         run: |
           apt-get -q install --yes xvfb
           apt-get -q install --yes dbus

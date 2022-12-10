@@ -57,6 +57,7 @@ public class CandidatePage {
         List<WebElement> allRows = null;
         try {
             allRows = candidateTable.findElements(By.tagName("tr"));
+            System.out.println("allRows: " + allRows.toString());
         } catch (StaleElementReferenceException e) { //I really do not like this
             return getCandidatesFromTable();
         }
