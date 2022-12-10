@@ -18,7 +18,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class Hook extends BaseUtil{
 
-    private BaseUtil base;
+    public static BaseUtil base = null;
 
     public Hook(BaseUtil base) {
         this.base = base;
