@@ -8,6 +8,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import model.Candidate;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import pages.CandidatePage;
 
 import java.util.ArrayList;
@@ -96,6 +99,15 @@ public class LoginStep extends BaseUtil{
                 "I click the add button");
         CandidatePage page = new CandidatePage(Driver);
         page.clickAdd();
+        Thread.sleep(1000);
+        LogEntries entry = Hook.base.Driver.manage().logs().get(LogType.BROWSER);
+        // Retrieving all log
+        List<LogEntry> logs= entry.getAll();
+        // Print one by one
+        for(LogEntry e: logs)
+        {
+            System.out.println(e);
+        }
     }
 
     @And("^I click the delete button$")
