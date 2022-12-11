@@ -51,9 +51,8 @@ public class Hook extends BaseUtil{
     @After
     public void TearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
-            System.out.println(scenario.getName());
+            System.err.println(scenario.getName());
         }
-        System.out.println("Closing the browser : MOCK");
         base.Driver.quit();
     }
 

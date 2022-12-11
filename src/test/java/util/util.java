@@ -17,21 +17,8 @@ public class util {
     ){
         List<Candidate> copy = new ArrayList<>(candidates2);
         copy.removeAll(candidates1);
-        System.out.println(copy.toString());
-        System.out.println(candidates1.toString());
-        System.out.println(candidates2.toString());
-        LogEntries entry = Hook.base.Driver.manage().logs().get(LogType.BROWSER);
-        // Retrieving all log
-        List<LogEntry> logs= entry.getAll();
-        // Print one by one
-        for(LogEntry e: logs)
-        {
-            System.out.println(e);
-        }
 
-        System.out.println(copy.toString());
         assert(copy.size() == 1);
-        System.out.println(copy.toString());
         return copy.get(0);
     }
 }

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="conform workflow">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="removing main directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ea/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/util/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,13 +302,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
-      <created>1670120489498</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1670120489498</updated>
     </task>
     <task id="LOCAL-00010" summary="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails">
       <created>1670124120435</created>
@@ -645,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670748270313</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="removing main directory">
+      <created>1670755820446</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1670755820446</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -698,7 +699,8 @@
     <MESSAGE value="remove build angular" />
     <MESSAGE value="longer sleep, less debugging output" />
     <MESSAGE value="conform workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="conform workflow" />
+    <MESSAGE value="removing main directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing main directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
