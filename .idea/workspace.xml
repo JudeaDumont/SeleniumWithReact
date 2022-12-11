@@ -603,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670719785132</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Debugging">
+      <created>1670720529994</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670720529994</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -667,11 +674,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java</url>
           <line>34</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/util/util.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

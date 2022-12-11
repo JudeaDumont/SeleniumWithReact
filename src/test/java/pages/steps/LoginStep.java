@@ -61,8 +61,8 @@ public class LoginStep extends BaseUtil{
 
     @Then("^the table does not contain the candidate$")
     public void tableDoesNotContainCandidate(){
-        assert (!candidateTableHistory.get(3).contains(candidateFromTableDiff));
-
+        boolean containsDeleted = candidateTableHistory.get(2).contains(candidateFromTableDiff);
+        assert (!containsDeleted);
     }
 
 
