@@ -71,7 +71,6 @@ jobs:
         run: |
           cd angular
           yes | npm install -g @angular/cli
-          npm install --save-dev @angular-devkit/build-angular@15.0.0
           yes | npm install @angular/material@15.0.0
           ng update @angular/cli @angular/core @angular/material --allow-dirty
 
