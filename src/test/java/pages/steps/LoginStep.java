@@ -99,7 +99,7 @@ public class LoginStep extends BaseUtil{
                 "I click the add button");
         CandidatePage page = new CandidatePage(Driver);
         page.clickAdd();
-        //Thread.sleep(1000); //this is required for proper execution in github actions
+        Thread.sleep(1000); //this is required for proper execution in github actions
         LogEntries entry = Hook.base.Driver.manage().logs().get(LogType.BROWSER);
         // Retrieving all log
         List<LogEntry> logs= entry.getAll();
