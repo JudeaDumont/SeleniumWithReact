@@ -86,13 +86,6 @@ jobs:
           yes | npm install @angular/material@15.0.0
           ng update @angular/cli @angular/core @angular/material --allow-dirty
 
-#      - name: install sudo for upterm
-#        run: |
-#          apt-get install sudo -y
-#
-#      - name: Setup upterm session #DEBUG
-#        uses: lhotari/action-upterm@v1
-
       - name: Checkout Selenium/Cucumber
         uses: actions/checkout@v3
         with:
@@ -102,8 +95,6 @@ jobs:
       - name: Build Selenium/Cucumber with Maven
 
         #fix for dbus included
-        #ng serve needs to give me output, why is the table not updating? headless? console errors? http errors?
-        # shell into github environment, run browser
         run: |
           apt-get -q install --yes xvfb
           apt-get -q install --yes dbus
