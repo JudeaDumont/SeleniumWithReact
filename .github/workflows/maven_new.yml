@@ -31,25 +31,23 @@ jobs:
           repository: JudeaDumont/java-ecosystem-project
           path: ./java-ecosystem-project
 
-
-      - name: Install PostgreSQL client & Maven
+      - name: Update apt-get
         run: |
-          apt-get -q update
-          apt-get -q install --yes maven
-          apt-get -q install --yes postgresql-client
+          apt-get -q update 1> /dev/null
+
+      - name: Install PostgreSQL client
+        run: |
+          apt-get -q install --yes postgresql-client 1> /dev/null
+
+      - name: Install Maven
+        run: |
+          apt-get -q install --yes maven 1> /dev/null
 
       - name: Migrate database, build project for flyway
         run: |
           cd java-ecosystem-project
-          pwd
-          mvn -q flyway:baseline -s .github/workflows/maven-settings.xml --file webapi/pom.xml
-          mvn -q flyway:migrate -s .github/workflows/maven-settings.xml --file webapi/pom.xml
-
-        env:
-          POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432
-          POSTGRES_PASSWORD: root
-          PGPASSWORD: root
+          mvn -q flyway:baseline -s .github/workflows/maven-settings.xml --file webapi/pom.xml 1> /dev/null
+          mvn -q flyway:migrate -s .github/workflows/maven-settings.xml --file webapi/pom.xml 1> /dev/null
 
       - name: Run tests with Maven
         run: |
@@ -97,14 +95,14 @@ jobs:
 
           apt-get -q install -y libappindicator1 fonts-liberation
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          dpkg -i google-chrome*.deb || true 
+          dpkg -i google-chrome*.deb || true
           apt-get -q install --yes -f
           ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
           google-chrome --version
 
           google-chrome --headless --no-sandbox
           Xvfb :0 -ac -screen 0 1024x768x24 &
-          
+
           cd java-ecosystem-project/webapi
           export JASYPT_ENCRYPTOR_PASSWORD=secretkey
           mvn spring-boot:run &

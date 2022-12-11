@@ -96,7 +96,7 @@ public class LoginStep extends BaseUtil{
                 "I click the add button");
         CandidatePage page = new CandidatePage(Driver);
         page.clickAdd();
-        Thread.sleep(2000); //this is required for proper execution in github action
+        Thread.sleep(3000); //this is required for proper execution in github action
     }
 
     @And("^I click the delete button$")
