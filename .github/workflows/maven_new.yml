@@ -86,8 +86,8 @@ jobs:
           yes | npm install @angular/material@15.0.0
           ng update @angular/cli @angular/core @angular/material --allow-dirty
 
-#      - name: Setup upterm session #DEBUG
-#        uses: lhotari/action-upterm@v1
+      - name: Setup upterm session #DEBUG
+        uses: lhotari/action-upterm@v1
 
       - name: Checkout Selenium/Cucumber
         uses: actions/checkout@v3
