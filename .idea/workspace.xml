@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="remove install angular core">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven_new.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven_new.yml" afterDir="false" />
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="conform workflow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ea/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,34 +301,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
-      <created>1670034296790</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1670034296790</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
-      <created>1670035606048</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670035606048</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
-      <created>1670035656208</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1670035656208</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
-      <created>1670036855978</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1670036855978</updated>
     </task>
     <task id="LOCAL-00009" summary="Integration into CI/CD&#10;Upgrading all dependencies and project compiler">
       <created>1670120489498</created>
@@ -645,7 +617,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670738557563</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="remove build angular">
+      <created>1670742080472</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1670742080472</updated>
+    </task>
+    <task id="LOCAL-00055" summary="remove build angular">
+      <created>1670744538737</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1670744538737</updated>
+    </task>
+    <task id="LOCAL-00056" summary="longer sleep, less debugging output">
+      <created>1670745138306</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1670745138306</updated>
+    </task>
+    <task id="LOCAL-00057" summary="conform workflow">
+      <created>1670748270313</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1670748270313</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -695,7 +695,10 @@
     <MESSAGE value="yep, it just needs time after add is clicked, wow." />
     <MESSAGE value="refactor party" />
     <MESSAGE value="remove install angular core" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove install angular core" />
+    <MESSAGE value="remove build angular" />
+    <MESSAGE value="longer sleep, less debugging output" />
+    <MESSAGE value="conform workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="conform workflow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
