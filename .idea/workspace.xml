@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="yep, it just needs time after add is clicked, wow.">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="refactor party">
       <change beforePath="$PROJECT_DIR$/.github/workflows/maven_new.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven_new.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -638,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670722661407</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="refactor party">
+      <created>1670734472483</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1670734472483</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -686,7 +693,8 @@
     <MESSAGE value="Solved: not enough time between clicking add button and table update, also, result of assert is &quot;undefined&quot; if an exception is thrown within the enclosing scope." />
     <MESSAGE value="is that really why or did I just not notice when it was fixed?" />
     <MESSAGE value="yep, it just needs time after add is clicked, wow." />
-    <option name="LAST_COMMIT_MESSAGE" value="yep, it just needs time after add is clicked, wow." />
+    <MESSAGE value="refactor party" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor party" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
