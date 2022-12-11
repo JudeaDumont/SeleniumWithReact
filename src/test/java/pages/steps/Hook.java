@@ -15,9 +15,12 @@ import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 
+import java.util.List;
 import java.util.logging.Level;
 
 public class Hook extends BaseUtil{
@@ -56,13 +59,18 @@ public class Hook extends BaseUtil{
 
     @BeforeStep
     public void BeforeEveryStep(Scenario scenario) {
-        System.out.println(
-                //"Before every step " + scenario.getId()
-        );
     }
 
     @AfterStep
     public void AfterEveryStep(Scenario scenario) throws NoSuchFieldException, IllegalAccessException {
     }
 
+    public void printBrowserConsole(){
+        LogEntries entry = Driver.manage().logs().get(LogType.BROWSER);
+        List<LogEntry> logs= entry.getAll();
+        for(LogEntry e: logs)
+        {
+            System.out.println(e);
+        }
+    }
 }
