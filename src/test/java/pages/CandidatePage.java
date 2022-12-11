@@ -57,13 +57,9 @@ public class CandidatePage {
         List<WebElement> allRows = null;
         try {
             allRows = candidateTable.findElements(By.tagName("tr"));
-            System.out.println("allRows: " + allRows.toString());
         for (WebElement row : allRows) {
-            System.out.println("row: " + row.toString());
             List<WebElement> cells = row.findElements(By.tagName("td"));
             if (cells.size() == 2) {
-                System.out.println("cells.get(0).getText(): " + cells.get(0).getText().toString());
-                System.out.println("cells.get(1).getText(): " + cells.get(1).getText().toString());
                 candidates.add(new Candidate(
                         cells.get(0).getText(),
                         Long.parseLong(cells.get(1).getText())));
