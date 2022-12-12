@@ -49,9 +49,17 @@ public class LoginStep extends BaseUtil {
                 new GherkinKeyword("And"),
                 "I add candidate table to history");
         CandidatePage page = new CandidatePage(Driver);
+
+        int i = 0;
+        while(!page.candidateTable.isEnabled()){
+            ++i;
+        }
+
+        System.out.println("candidateTable enabled tries: " + i);
+
         List<Candidate> candidatesFromTable = page.getCandidatesFromTable();
 
-        candidatesFromTable = forceCandidateTableDelta(page, candidatesFromTable);
+        //candidatesFromTable = forceCandidateTableDelta(page, candidatesFromTable);
 
         candidateTableHistory.add(candidatesFromTable);
     }
