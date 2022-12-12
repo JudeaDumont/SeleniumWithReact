@@ -14,4 +14,3 @@ Feature: CandidateAddDeleteFeature
     And I click the delete button
     And I add candidate table to history
     Then the table does not contain the candidate
-

@@ -9,6 +9,7 @@ public class Candidate {
     public Candidate(String name) {
         this.name = name;
     }
+
     public Candidate(String name, Long id) {
         this.name = name;
         this.id = id;

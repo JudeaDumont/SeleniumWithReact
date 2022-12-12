@@ -4,10 +4,6 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 
-/**
- * Created by Karthik on 21/09/2019.
- */
-
 public class BaseUtil {
 
     public static WebDriver Driver;
@@ -18,6 +14,6 @@ public class BaseUtil {
 
     public static ExtentTest features;
 
-    public static String reportLocation = "/Users/karthikkk/extent";
+    public static String reportLocation = "/Users/cucumber/extent";
 
 }

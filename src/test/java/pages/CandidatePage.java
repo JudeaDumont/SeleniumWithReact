@@ -32,39 +32,35 @@ public class CandidatePage {
     @FindBy(how = How.ID, using = "candidate-table")
     public WebElement candidateTable;
 
-    public void Add(String name)
-    {
+    public void Add(String name) {
         txtUserName.sendKeys(name);
     }
 
-    public void Delete(Candidate candidate)
-    {
+    public void Delete(Candidate candidate) {
         txtDeleteId.sendKeys(candidate.getId().toString());
     }
 
-    public void clickAdd()
-    {
+    public void clickAdd() {
         btnAdd.submit();
     }
 
-    public void clickDelete()
-    {
+    public void clickDelete() {
         btnDelete.submit();
     }
-    public List<Candidate> getCandidatesFromTable()
-    {
+
+    public List<Candidate> getCandidatesFromTable() {
         List<Candidate> candidates = new ArrayList<>();
         List<WebElement> allRows = null;
         try {
             allRows = candidateTable.findElements(By.tagName("tr"));
-        for (WebElement row : allRows) {
-            List<WebElement> cells = row.findElements(By.tagName("td"));
-            if (cells.size() == 2) {
-                candidates.add(new Candidate(
-                        cells.get(0).getText(),
-                        Long.parseLong(cells.get(1).getText())));
+            for (WebElement row : allRows) {
+                List<WebElement> cells = row.findElements(By.tagName("td"));
+                if (cells.size() == 2) {
+                    candidates.add(new Candidate(
+                            cells.get(0).getText(),
+                            Long.parseLong(cells.get(1).getText())));
+                }
             }
-        }
         } catch (StaleElementReferenceException e) { //I really do not like this
             return getCandidatesFromTable();
         }

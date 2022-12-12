@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="removing main directory">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="removing a lot of output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/util/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,13 +311,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00010" summary="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails">
-      <created>1670124120435</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1670124120435</updated>
     </task>
     <task id="LOCAL-00011" summary="Have to have --no-sandbox otherwise chrome closes unexpectedly">
       <created>1670125809502</created>
@@ -646,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670755820446</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="removing a lot of output">
+      <created>1670757009003</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1670757009003</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -700,7 +709,8 @@
     <MESSAGE value="longer sleep, less debugging output" />
     <MESSAGE value="conform workflow" />
     <MESSAGE value="removing main directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing main directory" />
+    <MESSAGE value="removing a lot of output" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing a lot of output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -714,11 +724,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ea/Main.java</url>
           <line>73</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,6 @@ package pages.steps;
 
 import Base.BaseUtil;
 import com.aventstack.extentreports.GherkinKeyword;
-
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -16,7 +15,7 @@ import java.util.Map;
 
 import static util.util.getCandidateFromTableDiff;
 
-public class LoginStep extends BaseUtil{
+public class LoginStep extends BaseUtil {
 
     private final List<List<Candidate>> candidateTableHistory
             = new ArrayList<>();
@@ -27,7 +26,7 @@ public class LoginStep extends BaseUtil{
     }
 
     @DataTableType(replaceWithEmptyString = "[blank]")
-    public Candidate convert(Map<String, String> entry){
+    public Candidate convert(Map<String, String> entry) {
         return new Candidate(
                 entry.get("name")
         );
@@ -43,13 +42,42 @@ public class LoginStep extends BaseUtil{
     }
 
     @And("^I add candidate table to history$")
-    public void iGetExistingCandidates(){
+    public void iAddCandidateToTableHistory() throws ClassNotFoundException {
+        scenarioDef.createNode(
+                new GherkinKeyword("And"),
+                "I add candidate table to history");
         CandidatePage page = new CandidatePage(Driver);
-        candidateTableHistory.add(page.getCandidatesFromTable());
+        List<Candidate> candidatesFromTable = page.getCandidatesFromTable();
+
+        candidatesFromTable = forceCandidateTableDelta(page, candidatesFromTable);
+
+        candidateTableHistory.add(candidatesFromTable);
+    }
+
+    private List<Candidate> forceCandidateTableDelta(
+            CandidatePage page,
+            List<Candidate> candidatesFromTable) {
+        //dirty hack for random table refresh interval (FORCE DELTAS)
+        int candidateTableHistorySize = candidateTableHistory.size();
+        if (candidateTableHistorySize > 0) {
+            for (int i = 0; i < Integer.MAX_VALUE; i++) {
+                if (candidatesFromTable.equals(
+                        candidateTableHistory.get(candidateTableHistorySize - 1))) {
+                    candidatesFromTable = page.getCandidatesFromTable();
+                } else {
+                    System.out.println("Force candidate table history delta tries: " + i);
+                    break;
+                }
+                if (i == Integer.MAX_VALUE - 1) {
+                    throw new RuntimeException("Candidate table never updated with new candidate!");
+                }
+            }
+        }
+        return candidatesFromTable;
     }
 
     @Then("^diff tables to get the new candidates ID$")
-    public void diffTablesToGetNewID(){
+    public void diffTablesToGetNewID() {
         candidateFromTableDiff = getCandidateFromTableDiff(
                 candidateTableHistory.get(0),
                 candidateTableHistory.get(1)
@@ -57,7 +85,7 @@ public class LoginStep extends BaseUtil{
     }
 
     @Then("^the table does not contain the candidate$")
-    public void tableDoesNotContainCandidate(){
+    public void tableDoesNotContainCandidate() {
         boolean containsDeleted = candidateTableHistory.get(2).contains(candidateFromTableDiff);
         assert (!containsDeleted);
     }
@@ -96,7 +124,6 @@ public class LoginStep extends BaseUtil{
                 "I click the add button");
         CandidatePage page = new CandidatePage(Driver);
         page.clickAdd();
-        Thread.sleep(5000); //this is required for proper execution in github action
     }
 
     @And("^I click the delete button$")
