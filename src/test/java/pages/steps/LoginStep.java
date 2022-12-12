@@ -22,6 +22,8 @@ public class LoginStep extends BaseUtil {
 
     private Candidate candidateFromTableDiff = null;
 
+    private List<Candidate> candidatesToAdd = null;
+
     public LoginStep() {
     }
 
@@ -68,6 +70,11 @@ public class LoginStep extends BaseUtil {
                     System.out.println("Force candidate table history delta tries: " + i);
                     break;
                 }
+                if(i!= 0 && i%10 == 0){
+                    page.txtUserName.clear();
+                    page.SendUserNameKeys(candidatesToAdd.get(0).getName());
+                    page.clickAdd();
+                }
                 if (i == Integer.MAX_VALUE - 1) {
                     throw new RuntimeException("Candidate table never updated with new candidate!");
                 }
@@ -102,6 +109,7 @@ public class LoginStep extends BaseUtil {
 
         page.SendUserNameKeys(table.get(0).getName());
 
+        candidatesToAdd = table;
     }
 
 
