@@ -12,7 +12,9 @@ public class util {
         List<Candidate> copy = new ArrayList<>(candidates2);
         copy.removeAll(candidates1);
 
-        assert (copy.size() == 1);
+        if(copy.size() != 1){
+            throw new RuntimeException("copy.size() = " + copy.size());
+        }
         return copy.get(0);
     }
 }

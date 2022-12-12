@@ -71,9 +71,7 @@ public class LoginStep extends BaseUtil {
                     break;
                 }
                 if(i!= 0 && i%10 == 0){
-                    page.txtUserName.clear();
-                    page.SendUserNameKeys(candidatesToAdd.get(0).getName());
-                    page.clickAdd();
+                    Driver.navigate().to("http://localhost:4200"); //try to refresh the page? idk
                 }
                 if (i == Integer.MAX_VALUE - 1) {
                     throw new RuntimeException("Candidate table never updated with new candidate!");
