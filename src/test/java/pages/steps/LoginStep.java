@@ -100,7 +100,7 @@ public class LoginStep extends BaseUtil {
 
         CandidatePage page = new CandidatePage(Driver);
 
-        page.Add(table.get(0).getName());
+        page.SendUserNameKeys(table.get(0).getName());
 
     }
 

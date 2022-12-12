@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="removing a lot of output">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="debugging candidate table update never happening">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/ExtentReportUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/Candidate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CandidatePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/Hook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/NGTestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/util/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/util/util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,20 +302,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Have to have --no-sandbox otherwise chrome closes unexpectedly">
-      <created>1670125809502</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1670125809502</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Have to have --no-sandbox otherwise chrome closes unexpectedly">
-      <created>1670126011987</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1670126011987</updated>
     </task>
     <task id="LOCAL-00013" summary="I think CI/CD needs the hostname of the service">
       <created>1670126122353</created>
@@ -655,7 +632,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670757009003</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Lots of refactoring, forcing candidate table history deltas to evade false positive">
+      <created>1670804753676</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1670804753676</updated>
+    </task>
+    <task id="LOCAL-00061" summary="debugging candidate table update never happening">
+      <created>1670805910681</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670805910681</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -710,7 +701,9 @@
     <MESSAGE value="conform workflow" />
     <MESSAGE value="removing main directory" />
     <MESSAGE value="removing a lot of output" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing a lot of output" />
+    <MESSAGE value="Lots of refactoring, forcing candidate table history deltas to evade false positive" />
+    <MESSAGE value="debugging candidate table update never happening" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging candidate table update never happening" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

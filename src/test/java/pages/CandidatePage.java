@@ -32,7 +32,7 @@ public class CandidatePage {
     @FindBy(how = How.ID, using = "candidate-table")
     public WebElement candidateTable;
 
-    public void Add(String name) {
+    public void SendUserNameKeys(String name) {
         txtUserName.sendKeys(name);
     }
 
