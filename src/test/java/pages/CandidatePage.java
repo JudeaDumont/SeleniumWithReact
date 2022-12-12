@@ -41,6 +41,11 @@ public class CandidatePage {
     }
 
     public void clickAdd() {
+        int i=0;
+        while(!btnAdd.isEnabled()){
+            ++i;
+        }
+        System.out.println("Tries before add button enabled: " + i);
         btnAdd.submit();
     }
 
