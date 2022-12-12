@@ -51,7 +51,7 @@ public class LoginStep extends BaseUtil {
         CandidatePage page = new CandidatePage(Driver);
 
         int i = 0;
-        while(!page.candidateTable.isEnabled()){
+        while(!page.candidateTable.isDisplayed()){
             ++i;
         }
 
