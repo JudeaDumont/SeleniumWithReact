@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="refresh i guess">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="attempting  better solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
     </list>
@@ -301,20 +301,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00016" summary="I think CI/CD needs the hostname of the service">
-      <created>1670129898696</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1670129898696</updated>
-    </task>
-    <task id="LOCAL-00017" summary="removing unused imports">
-      <created>1670453074846</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1670453074846</updated>
     </task>
     <task id="LOCAL-00018" summary="I want updates to the selenium repo to build the full project and run tests against it was well.">
       <created>1670453945487</created>
@@ -645,7 +631,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670808216402</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="attempting  better solution">
+      <created>1670856346266</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1670856346266</updated>
+    </task>
+    <task id="LOCAL-00066" summary="attempting  better solution">
+      <created>1670856663780</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1670856663780</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -677,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A bunch of random changes in a &quot;Default&quot; changelist from the original repo I guess?" />
     <MESSAGE value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
     <MESSAGE value="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails" />
     <MESSAGE value="Have to have --no-sandbox otherwise chrome closes unexpectedly" />
@@ -702,7 +701,8 @@
     <MESSAGE value="Lots of refactoring, forcing candidate table history deltas to evade false positive" />
     <MESSAGE value="debugging candidate table update never happening" />
     <MESSAGE value="refresh i guess" />
-    <option name="LAST_COMMIT_MESSAGE" value="refresh i guess" />
+    <MESSAGE value="attempting  better solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempting  better solution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,8 +7,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import model.Candidate;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CandidatePage;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -50,27 +53,19 @@ public class LoginStep extends BaseUtil {
                 "I add candidate table to history");
         CandidatePage page = new CandidatePage(Driver);
 
-        int i = 0;
-        while(!page.candidateTable.isDisplayed()){
-            ++i;
-        }
-
-        System.out.println("candidateTable enabled tries: " + i);
-
-        List<Candidate> candidatesFromTable = page.getCandidatesFromTable();
-
-        //candidatesFromTable = forceCandidateTableDelta(page, candidatesFromTable);
+        List<Candidate> candidatesFromTable = forceCandidateTableDelta(page);
 
         candidateTableHistory.add(candidatesFromTable);
     }
 
     private List<Candidate> forceCandidateTableDelta(
-            CandidatePage page,
-            List<Candidate> candidatesFromTable) {
+            CandidatePage page) {
         //dirty hack for random table refresh interval (FORCE DELTAS)
+
+        List<Candidate> candidatesFromTable = page.getCandidatesFromTable();
         int candidateTableHistorySize = candidateTableHistory.size();
         if (candidateTableHistorySize > 0) {
-            for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            for (int i = 0; i < 100; i++) {
                 if (candidatesFromTable.equals(
                         candidateTableHistory.get(candidateTableHistorySize - 1))) {
                     candidatesFromTable = page.getCandidatesFromTable();
@@ -79,9 +74,9 @@ public class LoginStep extends BaseUtil {
                     break;
                 }
                 if(i!= 0 && i%10 == 0){
-                    Driver.navigate().to("http://localhost:4200"); //try to refresh the page? idk
+                    Driver.navigate().to("http://localhost:4200"); //try to refresh the page
                 }
-                if (i == Integer.MAX_VALUE - 1) {
+                if (i == 99) {
                     throw new RuntimeException("Candidate table never updated with new candidate!");
                 }
             }
