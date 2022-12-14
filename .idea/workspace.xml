@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="attempting  better solution">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="made existing solution slightly less ugly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
     </list>
@@ -301,13 +301,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00018" summary="I want updates to the selenium repo to build the full project and run tests against it was well.">
-      <created>1670453945487</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1670453945487</updated>
     </task>
     <task id="LOCAL-00019" summary="Extra step in the UI test, add candidate">
       <created>1670457206002</created>
@@ -645,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670856663780</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="made existing solution slightly less ugly">
+      <created>1670858185665</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1670858185665</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -677,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Integration into CI/CD&#10;Upgrading all dependencies and project compiler" />
     <MESSAGE value="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails" />
     <MESSAGE value="Have to have --no-sandbox otherwise chrome closes unexpectedly" />
     <MESSAGE value="I think CI/CD needs the hostname of the service" />
@@ -702,7 +701,8 @@
     <MESSAGE value="debugging candidate table update never happening" />
     <MESSAGE value="refresh i guess" />
     <MESSAGE value="attempting  better solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempting  better solution" />
+    <MESSAGE value="made existing solution slightly less ugly" />
+    <option name="LAST_COMMIT_MESSAGE" value="made existing solution slightly less ugly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

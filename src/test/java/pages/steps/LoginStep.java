@@ -53,7 +53,8 @@ public class LoginStep extends BaseUtil {
                 "I add candidate table to history");
         CandidatePage page = new CandidatePage(Driver);
 
-        List<Candidate> candidatesFromTable = forceCandidateTableDelta(page);
+        List<Candidate> candidatesFromTable = page.getCandidatesFromTable();
+        //List<Candidate> candidatesFromTable = forceCandidateTableDelta(page);
 
         candidateTableHistory.add(candidatesFromTable);
     }
