@@ -302,13 +302,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
     </task>
-    <task id="LOCAL-00019" summary="Extra step in the UI test, add candidate">
-      <created>1670457206002</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1670457206002</updated>
-    </task>
     <task id="LOCAL-00020" summary="Extra step in the UI test, add candidate">
       <created>1670457598240</created>
       <option name="number" value="00020" />
@@ -645,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670858185665</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="made existing solution slightly less ugly">
+      <created>1671010432078</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1671010432078</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView">
