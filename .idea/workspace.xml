@@ -303,13 +303,6 @@
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
     </task>
-    <task id="LOCAL-00022" summary="Test for adding and deleting a candidate all the while making sure the tbale updates appropriately.">
-      <created>1670623711169</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1670623711169</updated>
-    </task>
     <task id="LOCAL-00023" summary="Test for adding and deleting a candidate all the while making sure the tbale updates appropriately.">
       <created>1670624632119</created>
       <option name="number" value="00023" />
@@ -646,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671239678651</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Navigate to react successful">
+      <created>1671274267870</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1671274267870</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
