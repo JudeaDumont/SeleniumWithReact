@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="made existing solution slightly less ugly">
+    <list default="true" id="f48c7d8d-1416-490f-bf74-4a49f1e42449" name="Default" comment="Navigate to react successful">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven_new.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven_new.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CandidateAddDelete.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/steps/LoginStep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/SeleniumWithReact",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/IdeaProjects/SeleniumWithReact&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Karthik\IdeaProjects\CucumberBasics\src\test\java" />
@@ -303,13 +302,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476371778890</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Implementation for getting candidates from the angular candidate table">
-      <created>1670606523644</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1670606523644</updated>
     </task>
     <task id="LOCAL-00022" summary="Test for adding and deleting a candidate all the while making sure the tbale updates appropriately.">
       <created>1670623711169</created>
@@ -647,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671010894024</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Navigate to react successful">
+      <created>1671239678650</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1671239678651</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -679,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed dbus error via: mkdir /run/dbus -p&#10;                           dbus-daemon --system&#10;                           &#10;                           chrome still fails" />
     <MESSAGE value="Have to have --no-sandbox otherwise chrome closes unexpectedly" />
     <MESSAGE value="I think CI/CD needs the hostname of the service" />
     <MESSAGE value="removing unused imports" />
@@ -704,7 +702,8 @@
     <MESSAGE value="refresh i guess" />
     <MESSAGE value="attempting  better solution" />
     <MESSAGE value="made existing solution slightly less ugly" />
-    <option name="LAST_COMMIT_MESSAGE" value="made existing solution slightly less ugly" />
+    <MESSAGE value="Navigate to react successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigate to react successful" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

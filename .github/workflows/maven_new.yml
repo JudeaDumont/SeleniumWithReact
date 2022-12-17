@@ -20,16 +20,6 @@ jobs:
           --health-retries 5
 
     steps:
-      - name: Set up JDK 19
-        uses: actions/setup-java@v1
-        with:
-          java-version: 19
-
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          repository: JudeaDumont/java-ecosystem-project
-          path: ./java-ecosystem-project
 
       - name: Update apt-get
         run: |
@@ -39,41 +29,17 @@ jobs:
         run: |
           apt-get -q install --yes postgresql-client 1> /dev/null
 
-      - name: Install Maven
-        run: |
-          apt-get -q install --yes maven 1> /dev/null
-
-      - name: Migrate database, build project for flyway
-        run: |
-          cd java-ecosystem-project
-          mvn -q flyway:baseline -s .github/workflows/maven-settings.xml --file webapi/pom.xml 1> /dev/null
-          mvn -q flyway:migrate -s .github/workflows/maven-settings.xml --file webapi/pom.xml 1> /dev/null
-
-      - name: Run tests with Maven
-        run: |
-          cd java-ecosystem-project/webapi
-          mvn -q -B test
-        env:
-          JASYPT_ENCRYPTOR_PASSWORD: "secretkey" #required for yamlparser test
-
-      - name: Checkout Angular
+      - name: Checkout React
         uses: actions/checkout@v3
         with:
-          repository: JudeaDumont/angular8-frontend
-          path: ./angular
-
-      - name: Install Angular
-        run: |
-          cd angular
-          yes | npm install -g @angular/cli 1> /dev/null
-          yes | npm install @angular/material@15.0.0 1> /dev/null
-          ng update @angular/cli @angular/core @angular/material --allow-dirty 1> /dev/null
+          repository: JudeaDumont/react-app-frontend
+          path: ./react
 
       - name: Checkout Selenium/Cucumber
         uses: actions/checkout@v3
         with:
-          repository: JudeaDumont/SeleniumWithCucucumber
-          path: ./SeleniumWithCucucumber
+          repository: JudeaDumont/SeleniumWithReact
+          path: ./SeleniumWithReact
 
       - name: Install Chrome
         run: |
@@ -82,15 +48,16 @@ jobs:
           apt-get -q install --yes -f 1> /dev/null
           ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
 
-      #Remember that these "runs" are organized into processes, when they end, so do their children
-      - name: Run Spring Boot, Angular, and Selenium
+      - name: Install Maven
         run: |
-          cd java-ecosystem-project/webapi
-          export JASYPT_ENCRYPTOR_PASSWORD=secretkey
-          mvn spring-boot:run &
-          cd ../../angular
-          ng serve &
-          cd ../SeleniumWithCucucumber
+          apt-get -q install --yes maven 1> /dev/null
+
+      #Remember that these "runs" are organized into processes, when they end, so do their children
+      - name: Run React and Selenium
+        run: |
+          cd react
+          npm start &
+          cd ../SeleniumWithReact
           mvn -q clean verify -Dtestng.dtd.http=true
       - uses: deblockt/cucumber-report-annotations-action@v1.7
         with:
