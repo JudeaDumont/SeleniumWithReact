@@ -57,6 +57,11 @@ jobs:
         run: |
           apt-get -q install --yes maven 1> /dev/null
 
+      - name: Install NPM for react front end
+        run: |
+          cd react
+          npm install
+
       #Remember that these "runs" are organized into processes, when they end, so do their children
       - name: Run React and Selenium
         run: |
