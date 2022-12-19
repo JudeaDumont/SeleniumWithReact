@@ -18,57 +18,31 @@ public class CandidatePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(how = How.ID, using = "candidate-name-textbox")
-    public WebElement txtUserName;
+    @FindBy(how = How.ID, using = "count-btn")
+    public WebElement countButton;
 
-    @FindBy(how = How.ID, using = "delete-candidate-id")
-    public WebElement txtDeleteId;
+    @FindBy(how = How.ID, using = "count")
+    public WebElement countP;
 
-    @FindBy(how = How.NAME, using = "add-candidate-btn")
-    public WebElement btnAdd;
+    @FindBy(how = How.ID, using = "toggle-btn")
+    public WebElement toggleButton;
 
-    @FindBy(how = How.NAME, using = "delete-candidate-by-id")
-    public WebElement btnDelete;
-    @FindBy(how = How.ID, using = "candidate-table")
-    public WebElement candidateTable;
+    @FindBy(how = How.ID, using = "toggle")
+    public WebElement toggleP;
 
-    public void SendUserNameKeys(String name) {
-        txtUserName.sendKeys(name);
+    public void ClickCountButton() {
+        countButton.click();
     }
 
-    public void Delete(Candidate candidate) {
-        txtDeleteId.sendKeys(candidate.getId().toString());
+    public void ClickToggleButton() {
+        toggleButton.click();
     }
 
-    public void clickAdd() {
-        int i=0;
-        while(!btnAdd.isEnabled()){
-            ++i;
-        }
-        System.out.println("Tries before add button enabled: " + i);
-        btnAdd.submit();
+    public String GetCount() {
+        return countP.getText();
     }
 
-    public void clickDelete() {
-        btnDelete.submit();
-    }
-
-    public List<Candidate> getCandidatesFromTable() {
-        List<Candidate> candidates = new ArrayList<>();
-        List<WebElement> allRows = null;
-        try {
-            allRows = candidateTable.findElements(By.tagName("tr"));
-            for (WebElement row : allRows) {
-                List<WebElement> cells = row.findElements(By.tagName("td"));
-                if (cells.size() == 2) {
-                    candidates.add(new Candidate(
-                            cells.get(0).getText(),
-                            Long.parseLong(cells.get(1).getText())));
-                }
-            }
-        } catch (StaleElementReferenceException e) { //I really do not like this
-            return getCandidatesFromTable();
-        }
-        return candidates;
+    public String GetToggle() {
+        return toggleP.getText();
     }
 }
